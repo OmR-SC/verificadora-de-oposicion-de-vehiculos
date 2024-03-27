@@ -1,0 +1,37 @@
+{%extends 'static/base.html'%}
+{%block title%}Validadora de vehiculos{%endblock%}
+{%block content %}
+<div class="container mt-5 mb-4">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <h2 class="text-center mb-5">Verificar estatus de vehículo</h2>
+
+      <form id="form" action="/validar-datos" method="post">
+        <div class="mb-4">
+          <label for="placa" class="form-label">Placa</label>
+          <input id="placa" type="text" name="placa" class="form-control" placeholder="Digite una placa" required />
+        </div>
+        <div class="mb-4">
+          <label for="cedula" class="form-label">Cedula/RNC</label>
+          <input id="cedula" name="cedula" class="form-control" placeholder="Digite una cedula" required />
+        </div>
+        <div class="d-grid gap-2">
+          <button id="submitBtn" class="btn btn-primary" type="button" onclick="handleSubmit(event)">
+            Buscar</button>
+          <a href="/validar-datos/todos" id="validateAll" onclick="handleValidateAllRedirect(event)" role="button"
+            class="btn btn-dark">Verificar todos</a>
+          <a href="/reporte" id="reportes" role="button" class="btn btn-dark" target="_blank"
+            rel="noreferrer noopener">Ver reporte</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div id="spinner" class="text-center">
+  <div class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+{%block table%}{%endblock%}
+{%endblock%}

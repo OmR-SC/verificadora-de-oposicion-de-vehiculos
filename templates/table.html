@@ -1,0 +1,44 @@
+{%extends 'index.html'%}
+{%block table%}
+
+{% if done == False %}
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(() => alert("Registro no encontrado en la base de datos."), 2000);
+  });
+</script>
+{% else %}
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(() => alert("Operación realizada satisfactoriamente."), 2000);
+  });
+</script>
+{%endif%}
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Placa</th>
+      <th scope="col">Marca</th>
+      <th scope="col">Modelo</th>
+      <th scope="col">Color</th>
+      <th scope="col">Año</th>
+      <th scope="col">Estado</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for row in vehiculos_list %}
+    <tr>
+      <th scope="row">{{row[0]}}</th>
+      <td>{{row[1]}}</td>
+      <td>{{row[2]}}</td>
+      <td>{{row[3]}}</td>
+      <td>{{row[4]}}</td>
+      <td>{{row[5]}}</td>
+      <td>{{row[6]}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{%endblock%}

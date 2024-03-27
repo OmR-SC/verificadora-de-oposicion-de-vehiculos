@@ -1,0 +1,12 @@
+venv/
+openpyxl/
+.env
+
+__pycache__/
+*.py[cod]
+
+.pytest_cache/
+
+# Flask stuff:
+instance/
+.webassets-cache

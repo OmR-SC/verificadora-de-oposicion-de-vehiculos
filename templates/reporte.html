@@ -1,0 +1,27 @@
+{%extends 'static/base.html'%} 
+{%block title%}Reporte{%endblock%} {%block content %}
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Numero Prestamo</th>
+      <th scope="col">Placa</th>
+      <th scope="col">Cedula</th>
+      <th scope="col">Estado</th>
+      <th scope="col">Importante</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for row in vehiculos_list %}
+    <tr>
+      <th scope="row">{{row[0]}}</th>
+      <td>{{row[1]}}</td>
+      <td>{{row[2]}}</td>
+      <td>{{row[3]}}</td>
+      <td>{{row[4]}}</td>
+      <td>{{row[5]}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{%endblock%}
