@@ -109,6 +109,6 @@ En caso de que el resultado de "Estado" no sea uno de estos, el valor del campo 
 
 MIT License
 
-Consulta el archivo [LICENSE](LICENSE) para obtener más detalles.
+Consulta el archivo [LICENSE.md](LICENSE) para obtener más detalles.
 
 
